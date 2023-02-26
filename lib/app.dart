@@ -10,6 +10,7 @@ import 'package:user_repository/user_repository.dart';
 import 'authentication/bloc/authentication_bloc.dart';
 import 'splash/view/splash_page.dart';
 
+//Gunakan Statefull agar bisa di olah state nya by initState,sebagai inisiasi Repository
 class App extends StatefulWidget {
   const App({super.key});
 
@@ -19,6 +20,7 @@ class App extends StatefulWidget {
 
 //inject App dengan authenticationRepository dan userRepository
 class _AppState extends State<App> {
+  //dibuat late karena isinya baru diinisiasi kemudian di initState
   late final AuthenticationRepository _authenticationRepository;
   late final UserRepository _userRepository;
 
